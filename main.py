@@ -1,7 +1,6 @@
 """
-Created on 2023-08-31
-This project is for learning and a prototype of solving manufacturing inspection problems
- in author's daily work.
+Created in 07-2023
+This project is a prototype of solving manufacturing inspection problems.
 Trained models won't be inlcuded at this moment.
 """
 import cv2

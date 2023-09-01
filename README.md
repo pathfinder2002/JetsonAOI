@@ -1,5 +1,5 @@
 # JetsonAOI
-This is an E2E realization of a small AOI (automatic optical inspection) box using a Jetson device. It was inspired by the problem I frequently run into in my work in manufacturing that production line AOIs are usually too expensive and cumbersome to apply anywhere and move easily whenever needed.
+This is an E2E realization of a small AOI (automatic optical inspection) box using a Jetson device. It was inspired by the problem I frequently run into in my work in manufacturing that production line AOIs are too f expensive and cumbersome to apply anywhere and move easily whenever needed.
 
 Solution I'm experimenting here is putting a Nvidia Jetson device (Jetson Nano at the moment), a cheap 1080p webcam and an external hard drive into a small 3D printed box, hang it anywhere you want, connect it to a barcode scanner and PLC using Jetson's GPIO, 
 
