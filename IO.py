@@ -1,10 +1,16 @@
+"""
+input: pin 12
+output: pin 18
+chosen for no particular reason
+"""
+
 import Jetson.GPIO as GPIO  
 import time  
 
-# define an input function which receives signal from PLC
-def recieve_sig_PLC():
+# an input function which receives signal from PLC
+def recieve_sig():
 
-    # define input pin
+    # input pin
     input_pin = 12
 
     # Configure the GPIO pins
@@ -23,10 +29,10 @@ def recieve_sig_PLC():
 
     return signal
 
-# define an output function which sends out signal to PLC
-def send_sig_PLC(signal):
+# an output function which sends out signal to PLC
+def send_sig(signal):
     
-    # define output pin
+    # output pin
     output_pin = 18
 
     # Configure the GPIO pins
@@ -49,12 +55,12 @@ class scanner(socket.socket):
         super().__init__(socket.AF_INET, socket.SOCK_STREAM)
         self.connect(("192.168.100.100", 9004)) # host IP address and port
 
-    def send(self, msg):
+    def send_msg(self, msg):
         send_data = msg.encode("utf-8") 
         super().send(send_data)
         #self.close()
     
-    def recv(self):
+    def recv_msg(self):
         recv_data = super().recv(9004)
         recv_data = recv_data.decode("utf-8")
         print(recv_data)

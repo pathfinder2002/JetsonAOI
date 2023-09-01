@@ -32,7 +32,7 @@ if __name__ == '__main__':
 
     # start scanner
     #nano = scanner()
-    #nano.send("LON" + "\r\n")
+    #nano.send_msg("LON" + "\r\n")
 
     # make temp and perm save directories
     temp_dir = make_temp_dir()
@@ -56,10 +56,10 @@ if __name__ == '__main__':
         # recieve signal from keyboard in offline testing
         k, SN = recieve_sig()
 
-        # recieve signal from PLC
-        #k = recieve_sig_PLC()
         # recieve SN from scanner
-        #SN = nano.recv()
+        #SN = nano.recv_msg()
+        # recieve signal from PLC
+        #k = recieve_sig()
 
         # ESC to quit, SPACE to take pic
         if globals.exit_flag or k%256 == 27:
